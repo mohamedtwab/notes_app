@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:notes_app/models/note_model.dart';
 
-class CoustemNote extends StatelessWidget {
-  const CoustemNote({super.key});
+class CustomNote extends StatelessWidget {
+  final NoteModel note;
+  final int colorcard;
+  const CustomNote({super.key, required this.note, required this.colorcard});
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: Container(
         decoration: BoxDecoration(
-          color: Color(0xffFFCC80),
+          color: Color(colorcard) ,
           borderRadius: BorderRadius.circular(16),
         ),
         child: Padding(
@@ -23,11 +26,11 @@ class CoustemNote extends StatelessWidget {
             children: [
               ListTile(
                 title: Text(
-                  'Flutter tips',
+                  note.title,
                   style: TextStyle(color: Colors.black, fontSize: 32),
                 ),
                 subtitle: Text(
-                  'Bulid your app with Mo-Twab',
+                  note.content,
                   style: TextStyle(
                     color: Colors.black.withOpacity(.5),
                     fontSize: 22,
@@ -35,7 +38,7 @@ class CoustemNote extends StatelessWidget {
                 ),
                 isThreeLine: true,
                 trailing: Padding(
-                  padding: const EdgeInsets.only(top: 20.0,left: 30),
+                  padding: const EdgeInsets.only(top: 20.0, left: 30),
                   child: IconButton(
                     padding: EdgeInsets.zero,
                     onPressed: () {},
@@ -46,7 +49,7 @@ class CoustemNote extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(top: 16.0),
                 child: Text(
-                  'May21 , 2022',
+                  note.date,
                   style: TextStyle(
                     color: Colors.black.withOpacity(.5),
                     fontSize: 16,
