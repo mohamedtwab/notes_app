@@ -3,14 +3,14 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:notes_app/models/note_model.dart';
-import 'package:notes_app/widgets/coustem_note.dart';
-import 'package:notes_app/widgets/add_note_bottom_sheet.dart';
+import 'package:notes_app/widgets/widget_coustem_note.dart';
+import 'package:notes_app/widgets/widget_add_note_bottom_sheet.dart';
 
 class NotesView extends StatelessWidget {
   const NotesView({super.key});
   static const List<int> noteColors = [
     0xffFFCC80, // اللون الأول
-    0xffE6EE9B, // اللون التاني
+    0xffE6EE9B, // اللون التاني 
     0xff80DEEA, // اللون التالت
     0xffCF93D9, // اللون الرابع
     0xffF48FB1, // اللون الخامس

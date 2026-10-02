@@ -41,7 +41,9 @@ class CustomNote extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 20.0, left: 30),
                   child: IconButton(
                     padding: EdgeInsets.zero,
-                    onPressed: () {},
+                    onPressed: () {
+                      note.delete();
+                      },
                     icon: Icon(Icons.delete, color: Colors.black, size: 30),
                   ),
                 ),

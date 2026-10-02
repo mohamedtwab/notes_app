@@ -10,7 +10,7 @@ void main() async {
   await Hive.openBox<NoteModel>('notes_box');
   runApp(const NotesApp());
 }
- 
+
 class NotesApp extends StatelessWidget {
   const NotesApp({super.key});
 
